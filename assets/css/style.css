@@ -1,4 +1,12 @@
 img {
-  width: 15vw;
-  margin: 20px 5px;
+  width: 18vw;
+  margin: 5px;
+}
+
+#random-number {
+  font-size: 50px;
+}
+
+#wins-losses-list {
+  font-size: 35px;
 }

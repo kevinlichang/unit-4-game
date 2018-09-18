@@ -20,58 +20,49 @@ $(document).ready(function () {
       console.log("Random value: " + crystals[i]);
       
     };
+
+    totalScore = 0;
+    $("#total-score").text(totalScore);
   };
 
   valuesSet();
 
   // create on click function for each crystal image to add to total score
-  $("#crystal-1").on("click", function () {
-    totalScore += crystals[0];
+  $(".crystalimg").on("click", function () {
 
+    totalScore += crystals[parseInt($(this).attr("id"))];
     $("#total-score").text(totalScore);
-    console.log(this);
+    
+    // need to check total score with random number
+    // if total score === random number, increase to wins counter
+    // if total score > random number, increase to loss counter
+
+    if (totalScore === randomNumber) {
+      wins++;
+      $("#wins-count").html("Wins: " + wins);
+      $("#loss-count").html("Losses: " + losses);
+      alert("You win!");
+
+      // reset random number and values
+      valuesSet();
+
+    } else if (totalScore > randomNumber) {
+      losses++;
+      $("#wins-count").html("Wins: " + wins);
+      $("#loss-count").html("Losses: " + losses);
+      alert("Sorry, you busted! Try again.");
+
+      valuesSet();
+
+    };
+
 
   });
+  
+  
+  
 
-  $("#crystal-2").on("click", function () {
-    totalScore += crystals[1];
-
-    $("#total-score").text(totalScore);
-
-  });
-
-  $("#crystal-3").on("click", function () {
-
-    totalScore += crystals[2];
-
-    $("#total-score").text(totalScore);
-
-  });
-
-  $("#crystal-4").on("click", function () {
-
-    totalScore += crystals[3];
-
-    $("#total-score").text(totalScore);
-
-  });
-
-  // need to check total score with random number
-
-
-  // if total score === random number, increase to wins counter
-  // if total score > random number, increase to loss counter
-
-  if (totalScore === randomNumber) {
-    wins++;
-    $("#wins-count").html("Wins: " + wins);
-    $("#loss-count").html("Losses: " + losses);
-
-    // reset random number and values
-    valuesSet();
-
-  } else if (totalScore > randomNumber) {}
-
+  
   // reset random number and crystal value
 
 
