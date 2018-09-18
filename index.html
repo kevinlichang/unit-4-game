@@ -17,48 +17,86 @@
 
 <body>
 
-  <h1 class="text-center m-2 p-2">Crystals Collector</h1>
+  <h1 class="jumbotron jumbotron-fluid col-12 bg-dark text-white text-center m-2 p-2">Crystals Collector</h1>
 
 
   <div class="row justify-content-center">
-    <div class="col-10 border border-success" id="instructions">
+    <div class="col-12 col-sm-7 bg-dark text-white" id="instructions">
       <ul>
-      <li>You will be given a random number at the start of the game.</li>
-      <li>There are four crstals below. By clicking on a crystal, you will add a specific amount of points to your total
-        score.</li>
-      <li>You win the game by matching your total score to the random number.</li>
-      <li>You lose the game if your total score goes above the random number.</li>
-      <li>The value of each crystal is hidden from you until you click on it.</li>
-      <li>Each time when the game starts, the game will change the values of each crystal.</li>
+        <li>You will be given a random number at the start of the game.</li>
+        <li>There are four crstals below. By clicking on a crystal, you will add a specific amount of points to your
+          total
+          score.</li>
+        <li>You win the game by matching your total score to the random number.</li>
+        <li>You lose the game if your total score goes above the random number.</li>
+        <li>The value of each crystal is hidden from you until you click on it.</li>
+        <li>Each time when the game starts, the game will change the values of each crystal.</li>
       </ul>
     </div>
   </div>
 
-  <div class="row justify-content-center text-center">
-    <div class="col-4 m-3 p-2 border border-success">
-      Number to Match: 
-      <div id="random-number"></div>
+  <div class="row justify-content-center text-center align-items-center">
+    <div class="col-12 col-sm-4 col-md-3 m-3">
+
+      <div class="card">
+        <div class="card-header bg-dark text-white">
+          Number to Match:
+        </div>
+        <div class="card-body p-0">
+          <blockquote class="blockquote mb-0">
+            <div id="random-number"></div>
+          </blockquote>
+        </div>
+      </div>
+
     </div>
-    <div class="col-4 m-3 p-2 border border-success" id="wins-losses-list">
-      <div>Wins: <span id="wins-count">0</span></div>
-      <div>Losses: <span id="loss-count">0</span></div>
+
+    <div class="col-12 col-sm-4 col-md-3 m-3 bg-dark text-white" id="wins-losses-list">
+
+      <div>
+        Wins:
+        <span id="wins-count">0</span>
+      </div>
+
+      <div>
+        Losses:
+        <span id="loss-count">0</span>
+      </div>
+
     </div>
   </div>
 
   <div class="row justify-content-center">
-    <div class="col-10">
-      <img class="crystalimg" id="0" src="assets/images/crystal1.jpg">
-      <img class="crystalimg" id="1" src="assets/images/crystal2.jpg">
-      <img class="crystalimg" id="2" src="assets/images/crystal3.jpg">
-      <img class="crystalimg" id="3" src="assets/images/crystal4.jpg">
+
+    <div class="col-6 col-sm-3 col-md-2">
+      <img class="crystalimg img-fluid" id="0" src="assets/images/crystal1.jpg">
     </div>
+    <div class="col-6 col-sm-3 col-md-2">
+      <img class="crystalimg img-fluid" id="1" src="assets/images/crystal2.jpg">
+    </div>
+    <div class="col-6 col-sm-3 col-md-2">
+      <img class="crystalimg img-fluid" id="2" src="assets/images/crystal3.jpg">
+    </div>
+    <div class="col-6 col-sm-3 col-md-2">
+      <img class="crystalimg img-fluid" id="3" src="assets/images/crystal4.jpg">
+    </div>
+
   </div>
 
   <div class="row justify-content-center">
-    <div class="col-3 m-2 p-2 text-center border border-success" id="score-statement">
-      Your total score is: 
-      <div id="total-score"></div>
+    <div class="col-3 m-2 p-2 text-center">
 
+      <div class="card">
+        <div class="card-header bg-dark text-white">
+          Your total score is:
+        </div>
+        <div class="card-body p-0">
+          <blockquote class="blockquote mb-0">
+            <div id="total-score"></div>
+          </blockquote>
+        </div>
+      </div>
+      
     </div>
   </div>
 
