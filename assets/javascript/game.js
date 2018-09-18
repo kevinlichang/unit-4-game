@@ -8,7 +8,7 @@ $(document).ready(function () {
   var wins = 0;
   var losses = 0;
 
-  // function to generate random number and crystal values
+  // function to generate random number and crystal values and store in variables
   function valuesSet() {
     randomNumber = Math.floor(Math.random() * 101) + 19;
     $("#random-number").text(randomNumber);    
@@ -28,15 +28,15 @@ $(document).ready(function () {
   valuesSet();
 
   // create on click function for each crystal image to add to total score
+    // need to check total score with random number
+    // if total score === random number, increase to wins counter
+    // if total score > random number, increase to loss counter
+
   $(".crystalimg").on("click", function () {
 
     totalScore += crystals[parseInt($(this).attr("id"))];
     $("#total-score").text(totalScore);
     
-    // need to check total score with random number
-    // if total score === random number, increase to wins counter
-    // if total score > random number, increase to loss counter
-
     if (totalScore === randomNumber) {
       wins++;
       $("#wins-count").text(wins);
