@@ -39,8 +39,8 @@ $(document).ready(function () {
 
     if (totalScore === randomNumber) {
       wins++;
-      $("#wins-count").html("Wins: " + wins);
-      $("#loss-count").html("Losses: " + losses);
+      $("#wins-count").text(wins);
+      
       alert("You win!");
 
       // reset random number and values
@@ -48,8 +48,8 @@ $(document).ready(function () {
 
     } else if (totalScore > randomNumber) {
       losses++;
-      $("#wins-count").html("Wins: " + wins);
-      $("#loss-count").html("Losses: " + losses);
+      
+      $("#loss-count").text(losses);
       alert("Sorry, you busted! Try again.");
 
       valuesSet();
@@ -59,17 +59,5 @@ $(document).ready(function () {
 
   });
   
-  
-  
-
-  
-  // reset random number and crystal value
-
-
-
-
-
-
-
 
 });

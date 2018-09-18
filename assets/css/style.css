@@ -3,8 +3,12 @@ img {
   margin: 5px;
 }
 
-#random-number {
-  font-size: 50px;
+li {
+  line-height: 1.7;
+}
+
+#random-number, #total-score {
+  font-size: 42px;
 }
 
 #wins-losses-list {
